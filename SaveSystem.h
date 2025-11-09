@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include "DevilBreaker.h"
 #include <fstream>
 #include <iostream>
 
@@ -9,7 +8,7 @@ private:
     const std::string saveFile = "dmc_save.bin";
 
 public:
-    bool Save(DevilBreaker* hunter)
+    bool Save(DemonHunter* hunter)
     {
         std::ofstream file(saveFile, std::ios::binary);
 
@@ -31,7 +30,7 @@ public:
         return true;
     }
 
-    bool Load(DevilBreaker* hunter)
+    bool Load(DemonHunter* hunter)
     {
         std::ifstream file(saveFile, std::ios::binary);
 
